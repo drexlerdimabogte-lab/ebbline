@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ebbline — Naval Architecture & Yacht Design</title>
+<meta name="description" content="Ebbline is a fictional naval architecture and yacht design studio in Bergen: hull lines, yacht design, interiors and sea trials (concept demo).">
+<meta name="theme-color" content="#eef0ef">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://drexlerdimabogte-lab.github.io/ebbline/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://drexlerdimabogte-lab.github.io/ebbline/">
+<meta property="og:site_name" content="Ebbline">
+<meta property="og:title" content="Ebbline — Naval Architecture &amp; Yacht Design">
+<meta property="og:description" content="Quiet, efficient yachts and working vessels, drawn by hand in Bergen. A fictional studio concept demo.">
+<meta property="og:image" content="https://drexlerdimabogte-lab.github.io/ebbline/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ebbline: line drawing of a yacht hull over a soft blue grid">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ebbline — Naval Architecture &amp; Yacht Design">
+<meta name="twitter:description" content="Quiet, efficient yachts and working vessels, drawn by hand in Bergen. A fictional studio concept demo.">
+<meta name="twitter:image" content="https://drexlerdimabogte-lab.github.io/ebbline/og.jpg">
+<meta name="twitter:image:alt" content="Ebbline: line drawing of a yacht hull over a soft blue grid">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" crossorigin>
+</head>
+<body>
+<a class="skip mono" href="#work">Skip to content</a>
+<div class="bg" id="bg"></div>
+<div class="frame" aria-hidden="true"><i class="v l"></i><i class="v r"></i><i class="h b"></i></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="flabels" id="flabels" aria-hidden="true"></div>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-grid">
+    <span class="mono">Ebbline — Est. 2010</span>
+    <span class="mono">Fairing hull</span>
+  </div>
+  <div class="loader-main"><span class="loader-word">Ebb<br><em>line</em></span><span class="loader-pct"><b id="pct">000</b></span></div>
+  <div class="loader-bar"><i id="bar"></i></div>
+</div>
+
+<header class="chrome">
+  <a class="brand" href="#top"><span class="mark"></span>Ebbline</a>
+  <nav class="mono"><a href="#drawing">Method</a><a href="#floors">Decks</a><a href="#work">Vessels</a><a href="#services">Services</a></nav>
+  <a class="cta-link mono" href="#contact">Commission a vessel <i>↗</i></a>
+</header>
+
+<div class="hud mono" id="hud"><span id="hudStage">01 — HARBOUR</span><span id="hudTime">10:00</span><span>60.39°N 5.32°E</span></div>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-meta mono"><span>Naval architecture</span><span>Yacht design</span><span>Interiors</span></div>
+  <h1 class="display"><span class="line">Hulls drawn</span><span class="line"><em>for open water.</em></span></h1>
+  <div class="hero-foot">
+    <p class="lede">Ebbline is a studio of twelve naval architects on the Bergen waterfront, drawing quiet, efficient yachts and working vessels that last.</p>
+    <p class="mono scroll-cue">Scroll to loft the hull ↓</p>
+  </div>
+</section>
+
+<section class="drawing" id="drawing">
+  <div class="pin pinA">
+    <div class="pin-copy">
+      <p class="mono kicker">01 / Method</p>
+      <h2 class="h2" id="aTitle">We begin with <em>a line.</em></h2>
+      <p class="body" id="aBody">Every vessel starts as a lines plan: stations, waterlines and a sheer. Deck by deck the drawing gains weight, until paint, teak and glass take over the linework.</p>
+      <ul class="mono stage-list" id="aList"><li class="on">Lines</li><li>Structure</li><li>Superstructure</li><li>Finish</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="floors" id="floors">
+  <div class="pin pinB">
+    <div class="pin-copy">
+      <p class="mono kicker">02 / Decks</p>
+      <h2 class="h2">Five decks, <em>one</em> hull.</h2>
+      <p class="body">Ebb 30, a 30-metre explorer yacht for eight guests. Each deck steps back to open a terrace over the one below.</p>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="light">
+  <div class="pin pinC">
+    <div class="pin-copy">
+      <p class="mono kicker">03 / Light</p>
+      <h2 class="h2">Designed for the <em>whole</em> voyage.</h2>
+      <p class="body">We model the sun hour by hour. Window shades close against the noon glare and open again for the long gold of an evening at anchor.</p>
+      <div class="clock"><span class="mono" id="clockLabel">Morning</span><b id="clockTime">07:00</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="work sec" id="work">
+  <div class="sec-head"><div><p class="mono kicker" data-scramble>04 / Selected work</p><h2 class="h2" data-split>Recent <em>vessels.</em></h2></div>
+    <p class="body sec-note" data-split>Six of forty-one. Each one faired by hand, tank-tested, and launched with the same small team.</p></div>
+  <i class="gline"></i>
+  <div class="gallery" id="gallery"></div>
+  <p class="mono credit">Stand-in photographs of real vessels by other designers and yards, used under free licences for this concept demo. Photo credits are in the footer.</p>
+</section>
+
+<section class="marquee" aria-label="Recognition">
+  <div class="mq-row" data-dir="-1"><div class="mq-track mono-big"><span>Explorer Yacht of the Year 2025</span><i></i><span>Nordic Marine Design Prize</span><i></i><span>Low-Wake Award 2024</span><i></i><span>Sea Trials Medal — Efficiency</span><i></i><span>Fjord Ferry Competition</span><i></i></div></div>
+  <div class="mq-row alt" data-dir="1"><div class="mq-track mono-big"><span>Aluminium</span><i></i><span><em>Teak</em></span><i></i><span>Carbon</span><i></i><span><em>Steel</em></span><i></i><span>Linen</span><i></i><span><em>Cork</em></span><i></i></div></div>
+</section>
+
+<section class="statement" id="statement">
+  <div class="st-pin">
+    <div class="st-ruler" aria-hidden="true"><div class="st-ticks"></div></div>
+    <p class="mono kicker st-k">Manifesto</p>
+    <h2 class="st-title"><span class="st-fixed">We design for</span>
+      <span class="st-words"><span class="st-w">the sea state.</span><span class="st-w"><em>the crew.</em></span><span class="st-w">the horizon.</span><span class="st-w"><em>fifty years afloat.</em></span></span></h2>
+    <div class="st-coords mono"><span>[60.393, 5.324]</span><span id="stIdx">01 / 04</span></div>
+  </div>
+</section>
+
+<section class="stats sec" id="stats">
+  <div class="stat"><b data-count="16">0</b><span class="mono">Years at sea</span></div>
+  <div class="stat"><b data-count="41">0</b><span class="mono">Vessels launched</span></div>
+  <div class="stat"><b data-count="1200">0</b><span class="mono">Hull forms tank-tested</span></div>
+  <div class="stat"><b data-count="32" data-suffix="%">0</b><span class="mono">Lower fuel burn*</span></div>
+  <p class="mono stat-note">*Average vs. comparable hull forms at cruising speed, 2019–2025 launches.</p>
+</section>
+
+<section class="services sec" id="services">
+  <div class="sec-head"><div><p class="mono kicker" data-scramble>05 / Services</p><h2 class="h2" data-split>From first line to <em>launch</em> day.</h2></div>
+    <p class="body sec-note" data-split>Hover a discipline to see where it took us. Tap to read more.</p></div>
+  <ul class="svc-list" id="svcList">
+    <li class="svc-row" data-img="1" data-cursor="Open"><i class="gline"></i><span class="hover-bg"></span><span class="mono num" aria-hidden="true">S.01</span><h3><button type="button" class="svc-btn" aria-expanded="false" aria-controls="svc1">Naval architecture</button></h3><p class="desc">Hull form, stability and structure.</p><span class="plus" aria-hidden="true"></span>
+      <div class="svc-more" id="svc1" hidden><p>Lines, hydrostatics, stability books and structural design, checked in the tank and approved with class.</p></div></li>
+    <li class="svc-row" data-img="4" data-cursor="Open"><i class="gline"></i><span class="hover-bg"></span><span class="mono num" aria-hidden="true">S.02</span><h3><button type="button" class="svc-btn" aria-expanded="false" aria-controls="svc2">Yacht design</button></h3><p class="desc">Exterior styling and general arrangement.</p><span class="plus" aria-hidden="true"></span>
+      <div class="svc-more" id="svc2" hidden><p>Profiles, deck layouts and the flow from swim platform to sun deck, drawn around how owners and crew actually live aboard.</p></div></li>
+    <li class="svc-row" data-img="0" data-cursor="Open"><i class="gline"></i><span class="hover-bg"></span><span class="mono num" aria-hidden="true">S.03</span><h3><button type="button" class="svc-btn" aria-expanded="false" aria-controls="svc3">Interiors</button></h3><p class="desc">Joinery, lighting and soft furnishings.</p><span class="plus" aria-hidden="true"></span>
+      <div class="svc-more" id="svc3" hidden><p>We draw the saloon table with the frame spacing: joinery, lighting and finishes detailed together with the structure.</p></div></li>
+    <li class="svc-row" data-img="5" data-cursor="Open"><i class="gline"></i><span class="hover-bg"></span><span class="mono num" aria-hidden="true">S.04</span><h3><button type="button" class="svc-btn" aria-expanded="false" aria-controls="svc4">Refit &amp; repower</button></h3><p class="desc">Hybrid and electric conversions.</p><span class="plus" aria-hidden="true"></span>
+      <div class="svc-more" id="svc4" hidden><p>Keep the good hull, renew the rest. Surveys, weight studies and quiet hybrid drivetrains for older vessels.</p></div></li>
+    <li class="svc-row" data-img="3" data-cursor="Open"><i class="gline"></i><span class="hover-bg"></span><span class="mono num" aria-hidden="true">S.05</span><h3><button type="button" class="svc-btn" aria-expanded="false" aria-controls="svc5">Workboats</button></h3><p class="desc">Ferries, tenders and research vessels.</p><span class="plus" aria-hidden="true"></span>
+      <div class="svc-more" id="svc5" hidden><p>Efficient, easy-to-maintain hulls for operators who count every litre of fuel and every hour in the yard.</p></div><i class="gline end"></i></li>
+  </ul>
+</section>
+<div class="svc-preview" id="svcPreview" aria-hidden="true"><img alt=""></div>
+
+<section class="process" id="process">
+  <div class="pr-pin">
+    <div class="pr-grid-bg" aria-hidden="true"></div>
+    <div class="pr-head"><p class="mono kicker">06 / Process</p><h2 class="h2">Five stages, <em>no</em> surprises.</h2></div>
+    <aside class="pr-rail">
+      <div class="pr-num" aria-label="Step"><span class="d0">0</span><span class="d1"><span class="strip"><b>1</b><b>2</b><b>3</b><b>4</b><b>5</b></span></span><small class="mono">/05</small></div>
+      <nav class="rail-wrap" aria-label="Process steps">
+        <ol class="rail mono" id="rail">
+          <li><button type="button"><i></i><span class="rl">Concept</span></button></li><li><button type="button"><i></i><span class="rl">Hull lines</span></button></li><li><button type="button"><i></i><span class="rl">Engineering</span></button></li><li><button type="button"><i></i><span class="rl">Build</span></button></li><li><button type="button"><i></i><span class="rl">Sea trials</span></button></li>
+        </ol>
+        <span class="rail-line" aria-hidden="true"><span class="rail-fill" id="railFill"></span></span>
+      </nav>
+      <div class="pr-coords mono"><span id="prX">X 000.00</span><span id="prY">Y 000.00</span><span id="prZ">SEA STATE</span></div>
+    </aside>
+    <div class="pr-stage">
+      <svg id="prSvg" viewBox="0 0 1000 700" aria-label="Animated general arrangement of the Ebb 30 yacht"></svg>
+      <div class="swatches" id="swatches">
+        <div class="sw" style="--bg:linear-gradient(100deg,#c9cfd3,#eef1f2 45%,#b9c0c5 70%,#dde2e5)"><b>Aluminium</b><span class="mono">5083 marine</span></div>
+        <div class="sw" style="--bg:repeating-linear-gradient(0deg,#4a3c30 0 1.5px,#c39a6c 1.5px 9px,#b68d61 9px 10px)"><b>Teak</b><span class="mono">Caulked, FSC</span></div>
+        <div class="sw" style="--bg:repeating-linear-gradient(45deg,#2f3a44 0 4px,#46535f 4px 8px),#36424d"><b>Composite</b><span class="mono">Carbon twill</span></div>
+        <div class="sw" style="--bg:linear-gradient(180deg,#2f4a62 0 58%,#e3d6bb 58% 66%,#8a5a4a 66%)"><b>Steel</b><span class="mono">Painted hull</span></div>
+      </div>
+      <div class="phases mono" id="phases"><span>Keel</span><span>Frames</span><span>Plating</span><span>Superstructure</span><span>Outfit</span></div>
+    </div>
+    <div class="pr-panels">
+      <article class="pp"><p class="mono kicker">Step 01</p><h3>Concept</h3><p class="body">We start at sea, not at the desk: routes, sea states, wind and how the owner wants to live aboard, all before a single line is drawn.</p>
+        <div class="chips mono"><span>3–6 weeks</span><span>2 architects</span><span>Brief</span></div>
+        <ul class="dl"><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Operating profile &amp; route</li><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Sea state &amp; wind study</li><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Written design brief</li></ul></article>
+      <article class="pp"><p class="mono kicker">Step 02</p><h3>Hull lines</h3><p class="body">Soft pencil first, then faired lines. Stations, waterlines and sheer are tuned until the hull runs clean at cruising speed.</p>
+        <div class="chips mono"><span>6–12 weeks</span><span>CFD + tank</span><span>3 hull forms</span></div>
+        <ul class="dl"><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Lines plan &amp; body plan</li><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>General arrangement</li><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Resistance prediction</li></ul></article>
+      <article class="pp"><p class="mono kicker">Step 03</p><h3>Naval engineering</h3><p class="body">Every frame, plate and weld is checked. Stability, structure and weight are proven to class before steel or aluminium is cut.</p>
+        <div class="chips mono"><span>4–8 months</span><span>Class approval</span><span>Weight log</span></div>
+        <ul class="dl"><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Midship section &amp; scantlings</li><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Stability book (GZ)</li><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Materials &amp; systems spec</li></ul></article>
+      <article class="pp"><p class="mono kicker">Step 04</p><h3>Build</h3><p class="body">We sit in the yard every week, from keel laying to the last cushion, with one point of contact for the owner.</p>
+        <div class="chips mono"><span>12–24 months</span><span>Weekly visits</span><span>1 contact</span></div>
+        <ul class="dl"><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Keel, frames &amp; plating</li><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Superstructure &amp; outfit</li><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Launch &amp; commissioning</li></ul></article>
+      <article class="pp"><p class="mono kicker">Step 05</p><h3>Sea trials</h3><p class="body">Speed, fuel, noise and roll are measured against the numbers we promised, in open water and in the fjords.</p>
+        <div class="chips mono"><span>2–3 weeks</span><span>5 trial runs</span><span>Data logged</span></div>
+        <ul class="dl"><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Speed &amp; fuel curve</li><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Noise &amp; vibration survey</li><li><svg viewBox="0 0 16 16"><path pathLength="1" d="M3 8.5l3 3 7-7"/></svg>Handover &amp; crew training</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="walk" id="walk">
+  <div class="walk-pin">
+    <canvas id="walkgl"></canvas>
+    <div class="walk-labels" id="walkLabels"></div>
+    <div class="walk-copy">
+      <p class="mono kicker">07 / Walk-through</p>
+      <h2 class="h2">From <em>plan</em> to deck.</h2>
+      <p class="body">Ebb 30 starts as a 1:100 deck plan over its lines. Scroll to step aboard as the drawing turns into teak, paint and glass.</p>
+    </div>
+    <div class="walk-hud mono"><span id="walkMode">Deck plan — 1:100</span><span class="walk-bar"><i id="walkBar"></i></span><span id="walkPct">000</span></div>
+  </div>
+</section>
+
+<section class="sketch" id="sketch">
+  <div class="sk-pin">
+    <div class="sk-head"><p class="mono kicker">08 / Lines to launch</p><h2 class="h2">Ink first, <em>then</em> colour.</h2></div>
+    <div class="sk-frame">
+      <picture><source type="image/avif" srcset="img/sk-line-800.avif 800w, img/sk-line-1600.avif 1600w" sizes="(max-width: 900px) 100vw, 88vw"><source type="image/webp" srcset="img/sk-line-800.webp 800w, img/sk-line-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 88vw"><img class="sk-l sk-line" src="img/sk-line.jpg" alt="Blueprint line drawing of a classic white motor yacht" width="1600" height="900" loading="lazy" decoding="async"></picture>
+      <picture><source type="image/avif" srcset="img/sk-shade-800.avif 800w, img/sk-shade-1600.avif 1600w" sizes="(max-width: 900px) 100vw, 88vw"><source type="image/webp" srcset="img/sk-shade-800.webp 800w, img/sk-shade-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 88vw"><img class="sk-l sk-shade" src="img/sk-shade.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></picture>
+      <picture><source type="image/avif" srcset="img/sk-color-800.avif 800w, img/sk-color-1600.avif 1600w" sizes="(max-width: 900px) 100vw, 88vw"><source type="image/webp" srcset="img/sk-color-800.webp 800w, img/sk-color-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 88vw"><img class="sk-l sk-color" src="img/sk-color.jpg" alt="Colour photo of the same yacht at sea" width="1600" height="900" loading="lazy" decoding="async"></picture>
+      <svg class="sk-svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g class="cl">
+          <path pathLength="1" d="M0 711 H1600"/><path pathLength="1" d="M0 300 H1600"/>
+          <path pathLength="1" d="M453 0 V900"/><path pathLength="1" d="M750 0 V900"/><path pathLength="1" d="M1023 0 V900"/><path pathLength="1" d="M1312 0 V900"/>
+          <path pathLength="1" d="M1560 690 L0 470"/><path pathLength="1" d="M1560 690 L0 716"/><path pathLength="1" d="M1560 690 L0 160"/><path pathLength="1" d="M1560 690 L200 900"/>
+          <path pathLength="1" d="M40 40 H1560 V860 H40 Z"/>
+        </g>
+        <g class="ticks"><path pathLength="1" d="M40 880 H1560"/><path pathLength="1" d="M40 872 V888 M420 872 V888 M800 872 V888 M1180 872 V888 M1560 872 V888"/></g>
+        <circle class="sun" cx="1400" cy="170" r="110"/>
+        <circle class="vp" cx="1560" cy="690" r="7"/>
+      </svg>
+      <span class="sk-tag mono t1">[A] Waterline &amp; sheer</span><span class="sk-tag mono t2">[B] Tone</span><span class="sk-tag mono t3">[C] At sea</span>
+    </div>
+    <div class="sk-foot mono"><span id="skStage">01 — Lines</span><span>Photo: <a href="https://commons.wikimedia.org/wiki/File:HDMY_Dannebrog_(A540)_2017-08-16.jpg" target="_blank" rel="noopener">Colin</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> (blueprint &amp; tone layers derived, same licence)</span></div>
+  </div>
+</section>
+
+<section class="contact sec" id="contact">
+  <span class="corner tl mono" data-scramble>[00.000]</span><span class="corner tr mono" data-scramble>[60.393 N]</span>
+  <span class="corner bl mono" data-scramble>[05.324 E]</span><span class="corner br mono" data-scramble>[1:50]</span>
+  <p class="mono kicker" data-scramble>09 / Contact</p>
+  <h2 class="display small" data-split-chars>Have a voyage in mind? <em>Let's draw the hull.</em></h2>
+  <form class="cform" id="cform">
+    <label><span class="mono">Name</span><input required name="n" autocomplete="name"><i class="uline"></i></label>
+    <label><span class="mono">Email</span><input required type="email" name="e" autocomplete="email"><i class="uline"></i></label>
+    <label class="wide"><span class="mono">Tell us about the vessel</span><textarea name="m" rows="3"></textarea><i class="uline"></i></label>
+    <div class="magnet-wrap"><button class="btn magnet" type="submit" data-cursor="Send"><span class="btn-in">Send enquiry <i>↗</i></span></button></div>
+    <div class="ok"><svg viewBox="0 0 40 40"><path pathLength="1" d="M8 21 l8 8 l16 -18"/></svg><p class="mono">Thank you — this is a demo, nothing was sent.</p></div>
+  </form>
+</section>
+</main>
+
+<footer class="foot" id="foot">
+  <div class="foot-cols">
+    <div class="foot-col"><p class="mono kicker">Studio</p><p class="foot-big" data-split>Quiet hulls for <em>long</em> voyages.</p></div>
+    <div class="foot-col"><p class="mono kicker">Visit</p><p>Nordnes Quay 7<br>5005 Bergen, Norway</p><p class="mut">Fictional address · by appointment</p></div>
+    <div class="foot-col"><p class="mono kicker">Write</p><a class="flink" href="#contact"><span>studio@ebbline.example</span></a><a class="flink" href="#contact"><span>press@ebbline.example</span></a></div>
+    <div class="foot-col"><p class="mono kicker">Follow</p><a class="flink" href="#top"><span>Instagram</span></a><a class="flink" href="#top"><span>LinkedIn</span></a><a class="flink" href="#top"><span>Journal</span></a></div>
+  </div>
+  <svg class="wordmark" viewBox="0 0 1200 210" aria-label="Ebbline"><text x="600" y="172" text-anchor="middle">Ebbline</text></svg>
+  <details class="credits mono"><summary>Photo credits &amp; licenses</summary><ul id="credits"></ul><p>Photos show real vessels by other designers and yards, used only as stand-ins for this fictional studio demo. Section 08 photo: HDMY Dannebrog by Colin, CC BY-SA 4.0 via Wikimedia Commons; the blueprint and tone layers are derived from it and shared under the same licence. Logos and names on hulls belong to their owners.</p></details>
+  <div class="foot-bar mono"><span>© 2026 Ebbline — fictional studio, concept demo</span><a href="#top" class="totop" data-cursor="Top">Back to top ↑</a><span id="footClock">Bergen 00:00</span></div>
+</footer>
+<div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+<div class="sprog mono" id="sprog" aria-hidden="true"><i></i><span>000</span></div>
+<dialog class="case" id="case" aria-labelledby="caseTitle" data-lenis-prevent>
+  <div class="case-bar mono"><span>Ebbline — Case study</span><button type="button" class="case-close" data-cursor="Close">Close <i aria-hidden="true">×</i></button></div>
+  <div class="case-body"></div>
+</dialog>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="module" src="main.js"></script>
+</body>
+</html>
